@@ -1,0 +1,49 @@
+
+
+
+
+
+############## PI Login #################
+usrename : pi 
+passwd : 1234    , Bism
+
+################# Check path of file ####
+pi@raspberrypi:~ $ which pagekite.py
+/usr/local/bin/pagekite.py
+
+
+Run manuarly : 
+##############
+
+pi@raspberrypi:~/projects $ python3 denkilab.py
+pi@raspberrypi:~/projects $ sudo pagekite.py 8000 sensorpi.pagekite.me
+
+
+Added auto start command here : 
+###############################
+
+pi@raspberrypi:~ $ sudo nano /etc/systemd/system/denkilab.service
+sudo systemctl enable denkilab.service
+
+manually check : 
+###############################
+sudo systemctl start denkilab.service
+
+
+Created template for camera : 
+###############################
+pi@raspberrypi:~/projects/templates $ nano index.html 
+
+access camera : 
+https://sensorpi.pagekite.me/video_feed?token=ANISSA000754
+
+capture image : 
+https://sensorpi.pagekite.me/capture_image
+
+https://sensorpi.pagekite.me/capture_image?token=ANISSA000754
+
+Test servo : 
+https://sensorpi.pagekite.me/set_servo?token=ANISSA000754&angle=90
+
+pi@raspberrypi:~/projects $ fswebcam -d /dev/video1 images/test_image.jpg
+
