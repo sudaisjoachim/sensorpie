@@ -1,0 +1,1 @@
+wget -O code_armhf.deb https://update.code.visualstudio.com/latest/linux-deb-armhf/stable
